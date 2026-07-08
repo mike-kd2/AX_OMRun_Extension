@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Launcher ohne Installation: setzt PYTHONPATH auf src/ und ruft das Modul.
+# Nutzung: ./omrun-param-tool hydrate --config ... (siehe README)
+# Python via $PYTHON ueberschreibbar (Default: python3).
+set -euo pipefail
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PY="${PYTHON:-python3}"
+export PYTHONPATH="$here/src${PYTHONPATH:+:$PYTHONPATH}"
+exec "$PY" -m omrun_paramtool "$@"

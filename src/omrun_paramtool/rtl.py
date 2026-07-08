@@ -33,8 +33,8 @@ class RunTimeList:
     def _read_captions(self) -> dict[str, str]:
         """localname (_x0040_keyN) -> Caption (@paramN) aus der Schema-Sektion."""
         captions: dict[str, str] = {}
-        # Nur Schema-Deklarationen: Tag xs:element mit name-Attribut.
-        for el in self.root.xpath(".//*[local-name()='element']"):
+        # Nur Schema-Deklarationen: xs:element mit name-Attribut.
+        for el in dx.local_findall(self.root, "element"):
             name = el.get("name")
             if not name:
                 continue

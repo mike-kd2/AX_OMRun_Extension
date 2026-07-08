@@ -11,15 +11,56 @@ airgapped lauffaehig.
 Stand: **Stufe 1** (`inspect` / `hydrate` / `dehydrate` ueber stdin/stdout bzw.
 Zwischenablage). Kein Write-back in OMrun-Files (das ist Stufe 2).
 
-## Installation
+## Voraussetzung
 
-```
-pip install -e .            # nur lxml
-pip install -e .[clipboard] # zusaetzlich Zwischenablage (pyperclip)
-pip install -e .[dev]       # pytest
+Nur **Python 3.10+**. Der Kern laeuft ohne jede externe Abhaengigkeit auf der
+Python-Standardbibliothek -- ideal fuer airgapped Server (nichts zu installieren,
+kein Netzwerk noetig).
+
+Optional: `lxml` (bessere Serialisierungstreue fuer den spaeteren Write-back) und
+`pyperclip` (Zwischenablage). Ohne diese Pakete funktioniert alles ausser dem
+`clip`-Modus.
+
+## Betrieb auf airgapped Server (ohne Installation)
+
+Drei Wege, alle netzwerkfrei:
+
+**A) Launcher (empfohlen)** -- Repo klonen/kopieren, dann direkt:
+
+```bash
+./omrun-param-tool inspect --config <suite>          # Linux/macOS
+omrun-param-tool.cmd inspect --config <suite>        # Windows
 ```
 
-Python 3.10+. Pflicht-Dependency: `lxml`. Optional: `pyperclip`.
+**B) Als Modul** -- ohne Wrapper:
+
+```bash
+PYTHONPATH=src python -m omrun_paramtool inspect --config <suite>
+```
+
+**C) Ein einzelnes File** -- Zipapp bauen (einmalig, offline) und verteilen:
+
+```bash
+python scripts/build_pyz.py
+python dist/omrun-param-tool.pyz inspect --config <suite>
+```
+
+Das `.pyz` ist selbst-enthalten (reine Standardbibliothek) und laeuft auf jedem
+Python 3.10+.
+
+### Optionaler venv (nur wenn du lxml/pyperclip willst)
+
+```bash
+scripts/bootstrap.sh            # Kern (keine externen Deps)
+scripts/bootstrap.sh --extras   # + lxml + pyperclip (braucht einmalig Netz/Wheels)
+# Windows:
+powershell -ExecutionPolicy Bypass -File scripts\bootstrap.ps1 [-Extras]
+```
+
+### XML-Backend
+
+Automatisch: `lxml` falls vorhanden, sonst Standardbibliothek. Erzwingbar via
+Umgebungsvariable `OMRUN_XML_BACKEND=stdlib` bzw. `=lxml`.
 
 ## Konzepte
 
