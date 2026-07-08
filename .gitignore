@@ -1,0 +1,8 @@
+# Local extraction of provided test configs (not part of the tool sources)
+_incoming/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
