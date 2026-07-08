@@ -1,2 +1,0 @@
-[console_scripts]
-omrun-param-tool = omrun_paramtool.cli:main

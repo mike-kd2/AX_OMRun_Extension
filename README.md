@@ -62,6 +62,27 @@ powershell -ExecutionPolicy Bypass -File scripts\bootstrap.ps1 [-Extras]
 Automatisch: `lxml` falls vorhanden, sonst Standardbibliothek. Erzwingbar via
 Umgebungsvariable `OMRUN_XML_BACKEND=stdlib` bzw. `=lxml`.
 
+### Optionale Extras via Wheelhouse (offline)
+
+Wenn du die optionalen Pakete (`lxml`, `pyperclip`) auf dem airgapped Server
+willst, liegt unter `wheelhouse/` eine Offline-Paketquelle bereit (Windows x64,
+Python 3.11/3.12). Installation ohne Netzwerk:
+
+```
+pip install --no-index --find-links wheelhouse "omrun-param-tool[lxml,clipboard]"
+```
+
+`lxml` ist plattform-/Python-versions-spezifisch. Fuer eine andere Zielumgebung
+das Wheelhouse neu bauen (auf einem Rechner mit Netz):
+
+```
+scripts/build_wheelhouse.sh win_amd64:312           # Windows x64, Python 3.12
+scripts/build_wheelhouse.sh manylinux2014_x86_64:311 # Linux x64, Python 3.11
+# Windows: powershell -File scripts\build_wheelhouse.ps1 win_amd64:312
+```
+
+Details: `wheelhouse/README.txt`.
+
 ## Konzepte
 
 - **Config-Wurzel** (`--config`): eine OMrun-Suite (enthaelt `Environment/` und

@@ -10,3 +10,4 @@ venv/
 # Build-Artefakte (regenerierbar via scripts/build_pyz.py)
 dist/
 *.egg-info/
+build/

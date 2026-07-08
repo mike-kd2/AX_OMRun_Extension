@@ -1,7 +1,0 @@
-lxml>=4.9
-
-[clipboard]
-pyperclip>=1.8
-
-[dev]
-pytest>=7.0
