@@ -16,12 +16,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
-DIST = ROOT / "dist"
-OUT = DIST / "omrun-param-tool.pyz"
+# Kanonische, versionierte Ablage (wird vom portablen Launcher genutzt).
+OUT = ROOT / "portable" / "omrun-param-tool.pyz"
 
 
 def main() -> int:
-    DIST.mkdir(exist_ok=True)
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     zipapp.create_archive(
         source=SRC,
         target=OUT,
@@ -30,6 +30,7 @@ def main() -> int:
     )
     print(f"gebaut: {OUT.relative_to(ROOT)}")
     print("Aufruf: python", OUT.name, "inspect --config <suite>")
+    print("(portabel: portable/run-portable.cmd inspect --config <suite>)")
     return 0
 
 

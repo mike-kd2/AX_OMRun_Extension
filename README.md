@@ -21,7 +21,43 @@ Optional: `lxml` (bessere Serialisierungstreue fuer den spaeteren Write-back) un
 `pyperclip` (Zwischenablage). Ohne diese Pakete funktioniert alles ausser dem
 `clip`-Modus.
 
-## Betrieb auf airgapped Server (ohne Installation)
+## Voll portabel (KEIN Python installiert, kein Admin)
+
+Wenn auf dem Server gar kein Python vorhanden ist und nichts installiert werden
+darf: portables "embeddable" Python (nur entpacken, keine Installation) + das
+Tool als Single-File-App. Ablauf:
+
+1. **Einmalig auf einem Rechner MIT Internet** (dein Laptop reicht) den portablen
+   Ordner bauen -- er laedt das embeddable Python von python.org und bindet die
+   Wheelhouse-Extras ein:
+
+   ```
+   # Windows-Online-Rechner:
+   powershell -ExecutionPolicy Bypass -File scripts\make_portable_windows.ps1
+   # oder Linux/macOS-Online-Rechner (erzeugt trotzdem den Windows-Interpreter):
+   scripts/make_portable_windows.sh
+   ```
+
+   Ergebnis: `portable\` mit `python\` (portabler Interpreter), `omrun-param-tool.pyz`
+   und `run-portable.cmd`.
+
+2. **Den Ordner `portable\` komplett auf den airgapped Windows-Server kopieren**
+   (gleicher Transferweg wie fuer das restliche Repo).
+
+3. **Dort ohne Installation ausfuehren:**
+
+   ```
+   .\portable\run-portable.cmd inspect --config <suite>
+   .\portable\run-portable.cmd hydrate --config <suite> --object CreateCompareView ^
+        --side A --env Demo --rtl Extensive --out clip
+   ```
+
+Hinweis: Den Interpreter (`python.org`-ZIP) kann nur ein Online-Rechner ziehen --
+das ist der einzige einmalige Online-Schritt. `portable\omrun-param-tool.pyz` und
+`run-portable.cmd` liegen bereits im Repo; nur der Ordner `portable\python\` wird
+vom Skript erzeugt.
+
+## Betrieb auf airgapped Server (wenn Python vorhanden ist)
 
 Drei Wege, alle netzwerkfrei:
 

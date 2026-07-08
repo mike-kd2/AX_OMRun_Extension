@@ -11,3 +11,6 @@ venv/
 dist/
 *.egg-info/
 build/
+
+# Portabler Python-Interpreter (per make_portable_windows erzeugt; gross/plattformspezifisch)
+portable/python/
