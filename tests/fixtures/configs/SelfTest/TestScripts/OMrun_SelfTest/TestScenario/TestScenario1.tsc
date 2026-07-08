@@ -1,0 +1,69 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetTestScenario xmlns="http://tempuri.org/DataSetTestScenario.xsd">
+  <xs:schema id="DataSetTestScenario" targetNamespace="http://tempuri.org/DataSetTestScenario.xsd" xmlns:mstns="http://tempuri.org/DataSetTestScenario.xsd" xmlns="http://tempuri.org/DataSetTestScenario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DataSetTestScenario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Activated="True" msprop:OMrunVersion="5.1.0.2">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DataTableTestScenario">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Number" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="10" msdata:AutoIncrementStep="10" type="xs:long" minOccurs="0" />
+                <xs:element name="TestObjectType" type="xs:string" default="Data" minOccurs="0" />
+                <xs:element name="TestObject" type="xs:string" minOccurs="0" />
+                <xs:element name="RunTimeList" type="xs:string" default="Extensive" minOccurs="0" />
+                <xs:element name="Remark" type="xs:string" default="Test case comment" minOccurs="0" />
+                <xs:element name="StartTime" type="xs:string" minOccurs="0" />
+                <xs:element name="EndTime" type="xs:string" minOccurs="0" />
+                <xs:element name="RunTime" type="xs:string" minOccurs="0" />
+                <xs:element name="Passed" type="xs:unsignedInt" default="0" minOccurs="0" />
+                <xs:element name="Failed" type="xs:unsignedInt" default="0" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="PassedPercentage" type="xs:decimal" default="0" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1">
+        <xs:selector xpath=".//mstns:DataTableTestScenario" />
+        <xs:field xpath="mstns:Number" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <DataTableTestScenario>
+    <Number>10</Number>
+    <TestObjectType>Data</TestObjectType>
+    <TestObject>Component1 / TestDataObject1</TestObject>
+    <RunTimeList>Extensive</RunTimeList>
+    <Remark>Passing self test with environment Test1</Remark>
+    <StartTime>2010.10.27 17:51:12</StartTime>
+    <EndTime>2010.10.27 17:51:12</EndTime>
+    <RunTime>0:00:01</RunTime>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <Active>true</Active>
+    <PassedPercentage>0</PassedPercentage>
+  </DataTableTestScenario>
+  <DataTableTestScenario>
+    <Number>20</Number>
+    <TestObjectType>Data</TestObjectType>
+    <TestObject>Component1 / TestDataObject2</TestObject>
+    <RunTimeList>Extensive</RunTimeList>
+    <Remark>Content list of useful internal variables</Remark>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <Active>true</Active>
+    <PassedPercentage>0</PassedPercentage>
+  </DataTableTestScenario>
+  <DataTableTestScenario>
+    <Number>30</Number>
+    <TestObjectType>Prog</TestObjectType>
+    <TestObject>Component1 / Housekeeping</TestObject>
+    <RunTimeList>Extensive</RunTimeList>
+    <Remark>Archive result files older than 180 days</Remark>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <Active>true</Active>
+    <PassedPercentage>0</PassedPercentage>
+  </DataTableTestScenario>
+</DataSetTestScenario>

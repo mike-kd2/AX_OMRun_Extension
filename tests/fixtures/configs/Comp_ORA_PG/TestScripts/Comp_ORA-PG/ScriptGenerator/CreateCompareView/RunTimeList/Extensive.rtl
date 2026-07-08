@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetRunTime xmlns="http://tempuri.org/DataSetRunTime.xsd">
+  <xs:schema id="DataSetRunTime" targetNamespace="http://tempuri.org/DataSetRunTime.xsd" xmlns:mstns="http://tempuri.org/DataSetRunTime.xsd" xmlns="http://tempuri.org/DataSetRunTime.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DataSetRunTime" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Activated="True" msprop:OMrunVersion="5.2.0.11">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DataTableRunTime">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Number" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="10" msdata:AutoIncrementStep="10" type="xs:long" minOccurs="0" />
+                <xs:element name="_x0040_key1" msdata:Caption="@param1" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="_x0040_key2" msdata:Caption="@param2" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="_x0040_key3" msdata:Caption="@param3" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="_x0040_key4" msdata:Caption="@param4" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="Remark" type="xs:string" default="No parameter defined" minOccurs="0" />
+                <xs:element name="StartTime" type="xs:string" minOccurs="0" />
+                <xs:element name="EndTime" type="xs:string" minOccurs="0" />
+                <xs:element name="RunTime" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Passed" type="xs:unsignedInt" default="0" minOccurs="0" />
+                <xs:element name="Failed" type="xs:unsignedInt" default="0" minOccurs="0" />
+                <xs:element name="ExcelDestinationPath" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="PassedPercentage" type="xs:decimal" default="0" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1">
+        <xs:selector xpath=".//mstns:DataTableRunTime" />
+        <xs:field xpath="mstns:Number" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <DataTableRunTime>
+    <Number>10</Number>
+    <_x0040_key1>v_GetCompareQueryOra</_x0040_key1>
+    <_x0040_key2>v_GetCompareQueryPg</_x0040_key2>
+    <_x0040_key3>DataCompare</_x0040_key3>
+    <_x0040_key4>//text()</_x0040_key4>
+    <Remark>Create data compare view</Remark>
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedPercentage>0</PassedPercentage>
+  </DataTableRunTime>
+</DataSetRunTime>

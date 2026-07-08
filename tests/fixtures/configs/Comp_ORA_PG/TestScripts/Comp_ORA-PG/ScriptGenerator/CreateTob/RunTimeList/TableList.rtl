@@ -1,0 +1,433 @@
+<?xml version="1.0" standalone="yes"?>
+<OMrunRunTime xmlns="http://tempuri.org/OMrunRunTime.xsd">
+  <xs:schema id="OMrunRunTime" targetNamespace="http://tempuri.org/OMrunRunTime.xsd" xmlns:mstns="http://tempuri.org/OMrunRunTime.xsd" xmlns="http://tempuri.org/OMrunRunTime.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="OMrunRunTime" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:OMrunVersion="5.5.0.10" msprop:Activated="True">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DataTableRunTime">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Number" msdata:AutoIncrement="true" type="xs:long" minOccurs="0" />
+                <xs:element name="_x0040_key1" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="_x0040_key2" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="_x0040_key3" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="_x0040_key4" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="Remark" type="xs:string" default="No parameter defined" minOccurs="0" />
+                <xs:element name="StartTime" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="EndTime" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="RunTime" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Passed" type="xs:unsignedInt" default="0" minOccurs="0" />
+                <xs:element name="Failed" type="xs:unsignedInt" default="0" minOccurs="0" />
+                <xs:element name="ExcelDestinationPath" type="xs:string" default="" minOccurs="0" />
+                <xs:element name="PassedProcentage" type="xs:decimal" default="0" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1">
+        <xs:selector xpath=".//mstns:DataTableRunTime" />
+        <xs:field xpath="mstns:Number" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <DataTableRunTime>
+    <Number>0</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.categories;demo_target.categories</_x0040_key1>
+    <_x0040_key2>SELECT 
+   category_id AS category_id,
+   category_name AS category_name,
+   description AS description,
+   CASE WHEN picture IS NOT NULL 
+						 THEN LOWER(RAWTOHEX(DBMS_CRYPTO.HASH(PICTURE, 4))) 
+						 ELSE NULL 
+					END AS picture_blob_hash
+FROM demo_source.categories</_x0040_key2>
+    <_x0040_key3>SELECT 
+   case when picture is not null then LOWER(encode(digest(picture, 'sha256'), 'hex')) else null end AS picture_blob_hash,
+   category_id AS category_id,
+   category_name AS category_name,
+   description AS description
+FROM demo_target.categories</_x0040_key3>
+    <_x0040_key4>category_id</_x0040_key4>
+    <Remark>categories</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>10</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.customers;demo_target.customers</_x0040_key1>
+    <_x0040_key2>SELECT 
+   address AS address,
+   city AS city,
+   company_name AS company_name,
+   contact_name AS contact_name,
+   contact_title AS contact_title,
+   country AS country,
+   customer_id AS customer_id,
+   fax AS fax,
+   phone AS phone,
+   postal_code AS postal_code,
+   region AS region
+FROM demo_source.customers</_x0040_key2>
+    <_x0040_key3>SELECT 
+   address AS address,
+   city AS city,
+   company_name AS company_name,
+   contact_name AS contact_name,
+   contact_title AS contact_title,
+   country AS country,
+   customer_id AS customer_id,
+   fax AS fax,
+   phone AS phone,
+   postal_code AS postal_code,
+   region AS region
+FROM demo_target.customers</_x0040_key3>
+    <_x0040_key4>customer_id</_x0040_key4>
+    <Remark>customers</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>20</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.employee_territories;demo_target.employee_territories</_x0040_key1>
+    <_x0040_key2>SELECT 
+   employee_id AS employee_id,
+   territory_id AS territory_id
+FROM demo_source.employee_territories</_x0040_key2>
+    <_x0040_key3>SELECT 
+   employee_id AS employee_id,
+   territory_id AS territory_id
+FROM demo_target.employee_territories</_x0040_key3>
+    <_x0040_key4>employee_id;territory_id</_x0040_key4>
+    <Remark>employee_territories</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>30</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.employees;demo_target.employees</_x0040_key1>
+    <_x0040_key2>SELECT 
+   address AS address,
+   birth_date AS birth_date,
+   city AS city,
+   country AS country,
+   employee_id AS employee_id,
+   extension AS extension,
+   first_name AS first_name,
+   hire_date AS hire_date,
+   home_phone AS home_phone,
+   last_name AS last_name,
+   notes AS notes,
+   CASE WHEN photo IS NOT NULL 
+						 THEN LOWER(RAWTOHEX(DBMS_CRYPTO.HASH(PHOTO, 4))) 
+						 ELSE NULL 
+					END AS photo_blob_hash,
+   photo_path AS photo_path,
+   postal_code AS postal_code,
+   region AS region,
+   reports_to AS reports_to,
+   title AS title,
+   title_of_courtesy AS title_of_courtesy
+FROM demo_source.employees</_x0040_key2>
+    <_x0040_key3>SELECT 
+   address AS address,
+   birth_date AS birth_date,
+   case when photo is not null then LOWER(encode(digest(photo, 'sha256'), 'hex')) else null end AS photo_blob_hash,
+   city AS city,
+   country AS country,
+   employee_id AS employee_id,
+   extension AS extension,
+   first_name AS first_name,
+   hire_date AS hire_date,
+   home_phone AS home_phone,
+   last_name AS last_name,
+   notes AS notes,
+   photo_path AS photo_path,
+   postal_code AS postal_code,
+   region AS region,
+   reports_to AS reports_to,
+   title AS title,
+   title_of_courtesy AS title_of_courtesy
+FROM demo_target.employees</_x0040_key3>
+    <_x0040_key4>employee_id</_x0040_key4>
+    <Remark>employees</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>40</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.order_details;demo_target.order_details</_x0040_key1>
+    <_x0040_key2>SELECT 
+   discount AS discount,
+   order_id AS order_id,
+   product_id AS product_id,
+   quantity AS quantity,
+   unit_price AS unit_price
+FROM demo_source.order_details</_x0040_key2>
+    <_x0040_key3>SELECT 
+   discount AS discount,
+   order_id AS order_id,
+   product_id AS product_id,
+   quantity AS quantity,
+   unit_price AS unit_price
+FROM demo_target.order_details</_x0040_key3>
+    <_x0040_key4>order_id;product_id</_x0040_key4>
+    <Remark>order_details</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>50</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.orders;demo_target.orders</_x0040_key1>
+    <_x0040_key2>SELECT 
+   customer_id AS customer_id,
+   employee_id AS employee_id,
+   freight AS freight,
+   order_date AS order_date,
+   order_id AS order_id,
+   required_date AS required_date,
+   shipped_date AS shipped_date,
+   ship_address AS ship_address,
+   ship_city AS ship_city,
+   ship_country AS ship_country,
+   ship_name AS ship_name,
+   ship_postal_code AS ship_postal_code,
+   ship_region AS ship_region,
+   ship_via AS ship_via
+FROM demo_source.orders</_x0040_key2>
+    <_x0040_key3>SELECT 
+   customer_id AS customer_id,
+   employee_id AS employee_id,
+   freight AS freight,
+   order_date AS order_date,
+   order_id AS order_id,
+   required_date AS required_date,
+   ship_address AS ship_address,
+   ship_city AS ship_city,
+   ship_country AS ship_country,
+   ship_name AS ship_name,
+   ship_postal_code AS ship_postal_code,
+   ship_region AS ship_region,
+   ship_via AS ship_via,
+   shipped_date AS shipped_date
+FROM demo_target.orders</_x0040_key3>
+    <_x0040_key4>order_id</_x0040_key4>
+    <Remark>orders</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>60</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.products;demo_target.products</_x0040_key1>
+    <_x0040_key2>SELECT 
+   category_id AS category_id,
+   discontinued AS discontinued,
+   product_id AS product_id,
+   product_name AS product_name,
+   quantity_per_unit AS quantity_per_unit,
+   reorder_level AS reorder_level,
+   supplier_id AS supplier_id,
+   units_in_stock AS units_in_stock,
+   units_on_order AS units_on_order,
+   unit_price AS unit_price
+FROM demo_source.products</_x0040_key2>
+    <_x0040_key3>SELECT 
+   category_id AS category_id,
+   discontinued AS discontinued,
+   product_id AS product_id,
+   product_name AS product_name,
+   quantity_per_unit AS quantity_per_unit,
+   reorder_level AS reorder_level,
+   supplier_id AS supplier_id,
+   unit_price AS unit_price,
+   units_in_stock AS units_in_stock,
+   units_on_order AS units_on_order
+FROM demo_target.products</_x0040_key3>
+    <_x0040_key4>product_id</_x0040_key4>
+    <Remark>products</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>70</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.region;demo_target.region</_x0040_key1>
+    <_x0040_key2>SELECT 
+   region_description AS region_description,
+   region_id AS region_id
+FROM demo_source.region</_x0040_key2>
+    <_x0040_key3>SELECT 
+   region_description AS region_description,
+   region_id AS region_id
+FROM demo_target.region</_x0040_key3>
+    <_x0040_key4>region_id</_x0040_key4>
+    <Remark>region</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>80</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.shippers;demo_target.shippers</_x0040_key1>
+    <_x0040_key2>SELECT 
+   company_name AS company_name,
+   phone AS phone,
+   shipper_id AS shipper_id
+FROM demo_source.shippers</_x0040_key2>
+    <_x0040_key3>SELECT 
+   company_name AS company_name,
+   phone AS phone,
+   shipper_id AS shipper_id
+FROM demo_target.shippers</_x0040_key3>
+    <_x0040_key4>shipper_id</_x0040_key4>
+    <Remark>shippers</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>90</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.suppliers;demo_target.suppliers</_x0040_key1>
+    <_x0040_key2>SELECT 
+   address AS address,
+   city AS city,
+   company_name AS company_name,
+   contact_name AS contact_name,
+   contact_title AS contact_title,
+   country AS country,
+   fax AS fax,
+   homepage AS homepage,
+   phone AS phone,
+   postal_code AS postal_code,
+   region AS region,
+   supplier_id AS supplier_id
+FROM demo_source.suppliers</_x0040_key2>
+    <_x0040_key3>SELECT 
+   address AS address,
+   city AS city,
+   company_name AS company_name,
+   contact_name AS contact_name,
+   contact_title AS contact_title,
+   country AS country,
+   fax AS fax,
+   homepage AS homepage,
+   phone AS phone,
+   postal_code AS postal_code,
+   region AS region,
+   supplier_id AS supplier_id
+FROM demo_target.suppliers</_x0040_key3>
+    <_x0040_key4>supplier_id</_x0040_key4>
+    <Remark>suppliers</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>100</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.territories;demo_target.territories</_x0040_key1>
+    <_x0040_key2>SELECT 
+   region_id AS region_id,
+   territory_description AS territory_description,
+   territory_id AS territory_id
+FROM demo_source.territories</_x0040_key2>
+    <_x0040_key3>SELECT 
+   region_id AS region_id,
+   territory_description AS territory_description,
+   territory_id AS territory_id
+FROM demo_target.territories</_x0040_key3>
+    <_x0040_key4>territory_id</_x0040_key4>
+    <Remark>territories</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+  <DataTableRunTime>
+    <Number>110</Number>
+    <_x0040_key1>D:\omrun_templates\Comparison\TestScripts;Comparison_ORA_PG;DataCompare;demo_source.us_states;demo_target.us_states</_x0040_key1>
+    <_x0040_key2>SELECT 
+   state_abbr AS state_abbr,
+   state_id AS state_id,
+   state_name AS state_name,
+   state_region AS state_region
+FROM demo_source.us_states</_x0040_key2>
+    <_x0040_key3>SELECT 
+   state_abbr AS state_abbr,
+   state_id AS state_id,
+   state_name AS state_name,
+   state_region AS state_region
+FROM demo_target.us_states</_x0040_key3>
+    <_x0040_key4>state_id</_x0040_key4>
+    <Remark>us_states</Remark>
+    <StartTime />
+    <EndTime />
+    <RunTime />
+    <Active>true</Active>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <ExcelDestinationPath />
+    <PassedProcentage>0</PassedProcentage>
+  </DataTableRunTime>
+</OMrunRunTime>

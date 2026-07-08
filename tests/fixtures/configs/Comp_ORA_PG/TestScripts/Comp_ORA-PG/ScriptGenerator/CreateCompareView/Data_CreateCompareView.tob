@@ -1,0 +1,438 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetTestObject xmlns="http://tempuri.org/DataSetTestObject.xsd">
+  <xs:schema id="DataSetTestObject" targetNamespace="http://tempuri.org/DataSetTestObject.xsd" xmlns:mstns="http://tempuri.org/DataSetTestObject.xsd" xmlns="http://tempuri.org/DataSetTestObject.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DataSetTestObject" msdata:IsDataSet="true" msdata:Locale="en-US" msdata:EnforceConstraints="False" msprop:MappingMethod="ByName" msprop:OMrunVersion="5.3.0.17" msprop:Activated="True">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="BusinessMapping">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BusinessRule_Id" msdata:Caption="BusinessRuleA_Id" type="xs:int" />
+                <xs:element name="BusNameA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusAliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusNameB" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusAliasB" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Function" type="xs:string" minOccurs="0" />
+                <xs:element name="Low" type="xs:string" minOccurs="0" />
+                <xs:element name="High" type="xs:string" minOccurs="0" />
+                <xs:element name="Rule" type="xs:string" minOccurs="0" />
+                <xs:element name="Rounding" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Key" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+                <xs:element name="Modified_On" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Modified_By" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Info" type="xs:boolean" default="false" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TabAliasA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasA_Id" type="xs:int" />
+                <xs:element name="NameA" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TabAliasB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasB_Id" msdata:Caption="AliasA_Id" type="xs:int" />
+                <xs:element name="NameB" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AliasB" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ConfigurationA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasDbA" type="xs:string" minOccurs="0" />
+                <xs:element name="QueryA" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ConfigurationB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasDbB" msdata:Caption="AliasDbA" type="xs:string" minOccurs="0" />
+                <xs:element name="QueryB" msdata:Caption="QueryA" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Join">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="JoinType" type="xs:string" default="0" minOccurs="0" />
+                <xs:element name="Unique" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Sorted" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:BusinessMapping" />
+        <xs:field xpath="mstns:BusinessRule_Id" />
+      </xs:unique>
+      <xs:unique name="AliasAKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TabAliasA" />
+        <xs:field xpath="mstns:AliasA_Id" />
+      </xs:unique>
+      <xs:unique name="TabAliasB_AliasAKey1" msdata:ConstraintName="AliasAKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TabAliasB" />
+        <xs:field xpath="mstns:AliasB_Id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <BusinessMapping>
+    <BusinessRule_Id>0</BusinessRule_Id>
+    <BusNameA>SourceA.view_catalog</BusNameA>
+    <BusAliasA>A_view_catalog</BusAliasA>
+    <BusNameB>SourceB.view_catalog</BusNameB>
+    <BusAliasB>B_view_catalog</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_view_catalog</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Modified_On>2024-07-30T09:04:22.7958281+02:00</Modified_On>
+    <Modified_By>frz</Modified_By>
+    <Info>true</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>1</BusinessRule_Id>
+    <BusNameA>SourceA.view_schema</BusNameA>
+    <BusAliasA>A_view_schema</BusAliasA>
+    <BusNameB>SourceB.view_schema</BusNameB>
+    <BusAliasB>B_view_schema</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_view_schema</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Modified_On>2024-07-30T09:04:22.7958693+02:00</Modified_On>
+    <Modified_By>frz</Modified_By>
+    <Info>true</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>2</BusinessRule_Id>
+    <BusNameA>SourceA.view_name</BusNameA>
+    <BusAliasA>A_view_name</BusAliasA>
+    <BusNameB>SourceB.view_name</BusNameB>
+    <BusAliasB>B_view_name</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_view_name</Rule>
+    <Rounding />
+    <Key>true</Key>
+    <Active>true</Active>
+    <Modified_On>2024-08-07T10:34:52.3751348+02:00</Modified_On>
+    <Modified_By>frank_zeindler</Modified_By>
+    <Info>false</Info>
+  </BusinessMapping>
+  <TabAliasA>
+    <AliasA_Id>0</AliasA_Id>
+    <NameA>SourceA.view_catalog</NameA>
+    <AliasA>A_view_catalog</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>1</AliasA_Id>
+    <NameA>SourceA.view_schema</NameA>
+    <AliasA>A_view_schema</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>2</AliasA_Id>
+    <NameA>SourceA.view_name</NameA>
+    <AliasA>A_view_name</AliasA>
+  </TabAliasA>
+  <TabAliasB>
+    <AliasB_Id>0</AliasB_Id>
+    <NameB>SourceB.view_catalog</NameB>
+    <AliasB>B_view_catalog</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>1</AliasB_Id>
+    <NameB>SourceB.view_schema</NameB>
+    <AliasB>B_view_schema</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>2</AliasB_Id>
+    <NameB>SourceB.view_name</NameB>
+    <AliasB>B_view_name</AliasB>
+  </TabAliasB>
+  <ConfigurationA>
+    <AliasDbA>@DB_Source</AliasDbA>
+    <QueryA>/* Original Oracle script for OMrun */
+SELECT DISTINCT 
+    '@DB_Source_Name' AS view_catalog,
+    '@SCHEMA_Source' AS view_schema,
+    'v_CreateCompareView' AS view_name
+FROM dual
+
+/*BODY*/
+CREATE OR REPLACE VIEW @SCHEMA_Source.@param1 (table_catalog, infrastructur_info, select_statement, pk_attribute, table_name) AS
+SELECT
+	x.table_catalog AS table_catalog,
+	x.infrastructure_info AS infrastructur_info,
+	x.select_statement AS select_statement,
+	x.pk_attribute AS pk_attribute,
+	x.table_name AS table_name
+FROM
+(
+	SELECT
+		q.table_catalog AS table_catalog,
+		q.infrastructure_info AS infrastructure_info,
+		q.select_statement AS select_statement,
+		q.pk_attribute AS pk_attribute,
+		q.table_name AS table_name
+	FROM
+	(
+	SELECT
+		'BIX' as table_catalog, 
+		'@SCRIPT;@BSS;@param3;@SCHEMA_Source' 
+		|| '.' ||  LOWER(dc.table_name) 
+		|| ';' || '@SCHEMA_Target' 
+		|| '.' ||  LOWER(dc.table_name)  as infrastructure_info,  
+		'SELECT ' || CHR(10) || 
+		RTRIM
+		(
+			XMLAGG
+                                    (
+			    XMLELEMENT(E, dc.col_list || ',' || CHR(10)).EXTRACT('@param4') -- work around, replaces '@param4'
+                                        ORDER BY dc.column_name
+                                    ).getclobval(), ',' || CHR(10)
+		)  || CHR(10) || 
+                        'FROM @SCHEMA_Source.' || LOWER(dc.table_name) AS select_statement, 
+		CASE  
+			WHEN COUNT(pk.column_name) &gt; 0  
+			THEN LISTAGG(DISTINCT LOWER(pk.column_name), ';') WITHIN GROUP (ORDER BY pk.column_name)  
+		END AS pk_attribute, 
+		LOWER(dc.table_name) AS table_name 
+	FROM 
+	(
+		-- select distinct attributes for query with blob hash code 256
+		SELECT DISTINCT
+			CASE
+				WHEN c.data_type IN ('CLOB', 'BLOB', 'RAW', 'LONG RAW') THEN
+				'   CASE WHEN ' || LOWER(c.column_name) 
+								|| ' IS NOT NULL 
+						 THEN LOWER(RAWTOHEX(DBMS_CRYPTO.HASH(' || c.column_name || ', 4))) 
+						 ELSE NULL 
+					END AS ' || LOWER(c.column_name) || '_blob_hash'
+				ELSE
+				'   ' || LOWER(c.column_name) || ' AS ' || LOWER(c.column_name)
+			END AS col_list,
+			c.table_name AS table_name,
+			c.column_name AS column_name
+		FROM all_tab_columns c
+		JOIN all_tables t ON c.table_name = t.table_name 
+		WHERE UPPER(c.owner) = UPPER('@SCHEMA_Source') AND c.table_name != UPPER('dummy')
+	) dc
+	LEFT JOIN 
+	( 
+		-- select distinct pk's
+		SELECT DISTINCT
+			pk1.column_name
+			,cons.table_name
+			,cons.constraint_name
+			,cons.owner
+		FROM all_constraints cons 
+		JOIN all_cons_columns pk1 ON cons.table_name = pk1.table_name AND cons.constraint_type = 'P' 
+		AND pk1.constraint_name = cons.constraint_name AND UPPER(cons.OWNER) = UPPER('@SCHEMA_Source') 
+	) pk ON pk.table_name = dc.table_name AND pk.column_name = dc.column_name 
+	GROUP BY dc.table_name
+	) q
+   --WHERE rownum Between 0 and 319 -- temporary limitation
+) x</QueryA>
+    <Active>true</Active>
+  </ConfigurationA>
+  <ConfigurationB>
+    <AliasDbB>@DB_Target</AliasDbB>
+    <QueryB>/* Original PostgreSQL script for OMrun */
+SELECT 
+       current_database() AS view_catalog,
+       '@SCHEMA_Target' AS view_schema, 
+       'v_CreateCompareView' AS view_name
+FROM information_schema.Tables
+limit 1
+
+/*BODY*/
+-- Tabellen mit PK
+CREATE OR REPLACE  VIEW @SCHEMA_Target.@param2 (table_catalog, infrastructur_info, select_statement, pk_attribute, table_name) AS
+SELECT
+	x.table_catalog AS table_catalog
+	,x.infrastructur_info AS infrastructur_info
+	,x.select_statement AS select_statement
+	,x.pk_attribute AS pk_attribute
+	,x.table_name AS table_name
+FROM
+(
+SELECT
+	q.table_catalog AS table_catalog
+	,q.infrastructur_info AS infrastructur_info
+	,q.SelectStatement AS select_statement
+	,q.pk_attribute AS pk_attribute
+	,q.table_name AS table_name
+FROM
+	(
+	SELECT
+	   t.table_catalog as table_catalog
+	   ,'@SCRIPT;@BSS;@param3' || ';' || '@SCHEMA_Source'
+														|| '.' ||  t.table_name
+														|| ';' || '@SCHEMA_Target'
+														|| '.' ||  t.table_name  as infrastructur_info
+	   ,'SELECT ' || chr(10) || repeat(' ', 3) || string_agg(
+						DISTINCT
+						CASE
+							WHEN c.data_type IN ('bytea')
+ THEN
+								'case when ' || quote_ident(c.column_name) || ' is not null then LOWER(encode(digest(' || quote_ident(c.column_name) || ', ''sha256''), ''hex'')) else null end AS ' || quote_ident(c.column_name) || '_blob_hash'
+							ELSE
+								quote_ident(c.column_name) || ' AS ' || quote_ident(c.column_name)
+						END,
+						 ',' || chr(10) || repeat(' ', 3) /*ORDER BY c.ordinal_position*/)
+						|| chr(10)
+						|| 'FROM ' || LOWER('@SCHEMA_Target') || '.' || quote_ident(t.table_name) AS SelectStatement
+	   ,string_agg(DISTINCT pga.attname, ';') as pk_attribute
+	   ,t.table_name  as table_name
+	FROM information_schema.tables t
+	JOIN information_schema.columns c ON t.table_catalog = c.table_catalog AND t.table_schema = c.table_schema AND t.table_name = c.table_name
+	JOIN pg_class pgc ON pgc.relname = t.table_name
+	JOIN pg_namespace pgn ON pgn.oid = pgc.relnamespace AND pgn.nspname = '@SCHEMA_Target'
+	JOIN pg_attribute pga ON pga.attrelid = pgc.oid
+	JOIN pg_index pgi ON pgi.indrelid = pgc.oid AND pga.attnum = any(pgi.indkey) AND pgi.indisprimary
+	WHERE t.table_type = 'BASE TABLE' AND t.table_schema = '@SCHEMA_Target'
+	AND t.table_name NOT IN ('DCPACKAGES','DCTASKS') -- Ausschluss der Tabellen von DBPlus (DWE)
+	GROUP BY t.table_schema, t.table_name, t.table_catalog
+	ORDER BY t.table_name
+	) q
+) x
+
+UNION
+
+-- Tabellen ohne PK
+SELECT
+	x.table_catalog AS table_catalog
+	,x.infrastructur_info AS infrastructur_info
+	,x.select_statement AS select_statement
+	,x.pk_attribute AS pk_attribute
+	,x.table_name AS table_name
+FROM
+(
+SELECT
+	q.table_catalog AS table_catalog
+	,q.infrastructur_info AS infrastructur_info
+	,q.SelectStatement AS select_statement
+	,q.pk_attribute AS pk_attribute
+	,q.table_name AS table_name
+FROM
+	(
+	SELECT
+	   t.table_catalog as table_catalog
+	   ,'@SCRIPT;@BSS;@param3' || ';' || '@SCHEMA_Source'
+														|| '.' ||  t.table_name
+														|| ';' || '@SCHEMA_Target'
+														|| '.' ||  t.table_name  as infrastructur_info
+	   ,'SELECT ' || chr(10) || repeat(' ', 3) || string_agg(
+						DISTINCT
+						CASE
+							WHEN c.data_type IN ('bytea')
+ THEN
+								'case when ' || quote_ident(c.column_name) || ' is not null then LOWER(encode(digest(' || quote_ident(c.column_name) || ', ''sha256''), ''hex'')) else null end AS ' || quote_ident(c.column_name) || '_blob_hash'
+							ELSE
+								quote_ident(c.column_name) || ' AS ' || quote_ident(c.column_name)
+						END,
+						 ',' || chr(10) || repeat(' ', 3) /*ORDER BY c.ordinal_position*/)
+						|| chr(10)
+						|| 'FROM ' || LOWER('@SCHEMA_Target') || '.' || quote_ident(t.table_name) AS SelectStatement
+	  ,'' as pk_attribute
+	   ,t.table_name  as table_name
+	FROM information_schema.tables t
+	JOIN information_schema.columns c ON t.table_catalog = c.table_catalog AND t.table_schema = c.table_schema AND t.table_name = c.table_name
+	JOIN pg_class pgc ON pgc.relname = t.table_name
+	JOIN pg_namespace pgn ON pgn.oid = pgc.relnamespace AND pgn.nspname = '@SCHEMA_Target'
+	JOIN pg_attribute pga ON pga.attrelid = pgc.oid
+	-- JOIN pg_index pgi ON pgi.indrelid = pgc.oid AND pga.attnum = any(pgi.indkey) AND pgi.indisprimary -- tables mit PK (join deaktiviert)
+	WHERE t.table_type = 'BASE TABLE' AND t.table_schema = '@SCHEMA_Target'
+	AND t.table_name NOT IN ('DCPACKAGES','DCTASKS', 'dummy') -- Ausschluss der Tabellen von DBPlus (DWE)
+	AND pgc.oid NOT IN (SELECT indrelid from pg_index pgi WHERE pgi.indisprimary = 'true') -- tables ohne pk
+	GROUP BY t.table_schema, t.table_name, t.table_catalog
+	ORDER BY t.table_name
+	) q
+) x</QueryB>
+    <Active>true</Active>
+  </ConfigurationB>
+  <Join>
+    <JoinType>0</JoinType>
+    <Unique>true</Unique>
+    <Sorted>true</Sorted>
+  </Join>
+</DataSetTestObject>

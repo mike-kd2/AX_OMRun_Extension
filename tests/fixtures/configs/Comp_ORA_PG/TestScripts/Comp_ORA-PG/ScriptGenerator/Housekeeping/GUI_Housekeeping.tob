@@ -1,0 +1,221 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetTestObject xmlns="http://tempuri.org/DataSetTestObject.xsd">
+  <xs:schema id="DataSetTestObject" targetNamespace="http://tempuri.org/DataSetTestObject.xsd" xmlns:mstns="http://tempuri.org/DataSetTestObject.xsd" xmlns="http://tempuri.org/DataSetTestObject.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DataSetTestObject" msdata:IsDataSet="true" msdata:Locale="en-US" msdata:EnforceConstraints="False" msprop:Activated="True" msprop:MappingMethod="" msprop:OMrunVersion="5.2.0.11">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="BusinessMapping">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BusinessRule_Id" msdata:Caption="BusinessRuleA_Id" type="xs:int" />
+                <xs:element name="BusNameA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusAliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusNameB" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusAliasB" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Function" type="xs:string" minOccurs="0" />
+                <xs:element name="Low" type="xs:string" minOccurs="0" />
+                <xs:element name="High" type="xs:string" minOccurs="0" />
+                <xs:element name="Rule" type="xs:string" minOccurs="0" />
+                <xs:element name="Rounding" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Key" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+                <xs:element name="Modified_On" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Modified_By" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Info" type="xs:boolean" default="false" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TabAliasA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasA_Id" type="xs:int" />
+                <xs:element name="NameA" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TabAliasB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasB_Id" msdata:Caption="AliasA_Id" type="xs:int" />
+                <xs:element name="NameB" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AliasB" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ConfigurationA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasDbA" type="xs:string" minOccurs="0" />
+                <xs:element name="QueryA" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ConfigurationB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasDbB" msdata:Caption="AliasDbA" type="xs:string" minOccurs="0" />
+                <xs:element name="QueryB" msdata:Caption="QueryA" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Join">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="JoinType" type="xs:string" default="0" minOccurs="0" />
+                <xs:element name="Unique" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Sorted" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:BusinessMapping" />
+        <xs:field xpath="mstns:BusinessRule_Id" />
+      </xs:unique>
+      <xs:unique name="AliasAKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TabAliasA" />
+        <xs:field xpath="mstns:AliasA_Id" />
+      </xs:unique>
+      <xs:unique name="TabAliasB_AliasAKey1" msdata:ConstraintName="AliasAKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TabAliasB" />
+        <xs:field xpath="mstns:AliasB_Id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <BusinessMapping>
+    <BusinessRule_Id>0</BusinessRule_Id>
+    <BusNameA>SourceA.Result</BusNameA>
+    <BusAliasA>A_Result</BusAliasA>
+    <BusNameB>SourceB.Result</BusNameB>
+    <BusAliasB>B_Result</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_Result</Rule>
+    <Rounding />
+    <Key>true</Key>
+    <Active>true</Active>
+    <Description />
+    <Modified_On>2024-08-07T17:22:19.2942784+02:00</Modified_On>
+    <Modified_By>frank_zeindler</Modified_By>
+    <Info>false</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>1</BusinessRule_Id>
+    <BusNameA>SourceA.Command</BusNameA>
+    <BusAliasA>A_Command</BusAliasA>
+    <BusNameB>SourceB.Command</BusNameB>
+    <BusAliasB>B_Command</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_Command</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Description />
+    <Modified_On>2024-08-07T17:22:19.2947093+02:00</Modified_On>
+    <Modified_By>frank_zeindler</Modified_By>
+    <Info>true</Info>
+  </BusinessMapping>
+  <TabAliasA>
+    <AliasA_Id>0</AliasA_Id>
+    <NameA>SourceA.Result</NameA>
+    <AliasA>A_Result</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>1</AliasA_Id>
+    <NameA>SourceA.Command</NameA>
+    <AliasA>A_Command</AliasA>
+  </TabAliasA>
+  <TabAliasB>
+    <AliasB_Id>0</AliasB_Id>
+    <NameB>SourceB.Result</NameB>
+    <AliasB>B_Result</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>1</AliasB_Id>
+    <NameB>SourceB.Command</NameB>
+    <AliasB>B_Command</AliasB>
+  </TabAliasB>
+  <ConfigurationA>
+    <AliasDbA />
+    <QueryA />
+    <Active>true</Active>
+  </ConfigurationA>
+  <ConfigurationB>
+    <AliasDbB>Housekeeping</AliasDbB>
+    <QueryB />
+    <Active>true</Active>
+  </ConfigurationB>
+  <Join>
+    <JoinType>2</JoinType>
+    <Unique>true</Unique>
+    <Sorted>true</Sorted>
+  </Join>
+</DataSetTestObject>

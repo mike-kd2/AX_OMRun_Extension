@@ -1,0 +1,338 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetTestObject xmlns="http://tempuri.org/DataSetTestObject.xsd">
+  <xs:schema id="DataSetTestObject" targetNamespace="http://tempuri.org/DataSetTestObject.xsd" xmlns:mstns="http://tempuri.org/DataSetTestObject.xsd" xmlns="http://tempuri.org/DataSetTestObject.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DataSetTestObject" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:OMrunVersion="5.1.0.2" msprop:MappingMethod="BySequence" msprop:Activated="True">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="BusinessMapping">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BusinessRule_Id" msdata:Caption="BusinessRuleA_Id" type="xs:int" />
+                <xs:element name="BusNameA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusAliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusNameB" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusAliasB" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Function" type="xs:string" minOccurs="0" />
+                <xs:element name="Low" type="xs:string" minOccurs="0" />
+                <xs:element name="High" type="xs:string" minOccurs="0" />
+                <xs:element name="Rule" type="xs:string" minOccurs="0" />
+                <xs:element name="Rounding" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Key" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+                <xs:element name="Modified_On" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Modified_By" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Info" type="xs:boolean" default="false" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TabAliasA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasA_Id" type="xs:int" />
+                <xs:element name="NameA" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TabAliasB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasB_Id" msdata:Caption="AliasA_Id" type="xs:int" />
+                <xs:element name="NameB" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AliasB" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ConfigurationA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasDbA" type="xs:string" minOccurs="0" />
+                <xs:element name="QueryA" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ConfigurationB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasDbB" msdata:Caption="AliasDbA" type="xs:string" minOccurs="0" />
+                <xs:element name="QueryB" msdata:Caption="QueryA" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Join">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="JoinType" type="xs:string" default="0" minOccurs="0" />
+                <xs:element name="Unique" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Sorted" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:BusinessMapping" />
+        <xs:field xpath="mstns:BusinessRule_Id" />
+      </xs:unique>
+      <xs:unique name="AliasAKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TabAliasA" />
+        <xs:field xpath="mstns:AliasA_Id" />
+      </xs:unique>
+      <xs:unique name="TabAliasB_AliasAKey1" msdata:ConstraintName="AliasAKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TabAliasB" />
+        <xs:field xpath="mstns:AliasB_Id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <BusinessMapping>
+    <BusinessRule_Id>0</BusinessRule_Id>
+    <BusNameA>SourceA.Environment</BusNameA>
+    <BusAliasA>A_Environment</BusAliasA>
+    <BusNameB>SourceB.Environment</BusNameB>
+    <BusAliasB>B_Environment</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_Environment</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Description>Generated</Description>
+    <Modified_On>2022-12-15T11:42:27.0697888+01:00</Modified_On>
+    <Modified_By>FrankZeindler</Modified_By>
+    <Info>true</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>1</BusinessRule_Id>
+    <BusNameA>SourceA.Id</BusNameA>
+    <BusAliasA>A_Id</BusAliasA>
+    <BusNameB>SourceB.Id</BusNameB>
+    <BusAliasB>B_Id</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_Id</Rule>
+    <Rounding />
+    <Key>true</Key>
+    <Active>true</Active>
+    <Description>Generated</Description>
+    <Info>false</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>2</BusinessRule_Id>
+    <BusNameA>SourceA.Name</BusNameA>
+    <BusAliasA>A_Name</BusAliasA>
+    <BusNameB>SourceB.Name</BusNameB>
+    <BusAliasB>B_Name</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_Name</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Description>Generated</Description>
+    <Info>false</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>3</BusinessRule_Id>
+    <BusNameA>SourceA.Price</BusNameA>
+    <BusAliasA>A_Price</BusAliasA>
+    <BusNameB>SourceB.Price</BusNameB>
+    <BusAliasB>B_Price</BusAliasB>
+    <Function>%</Function>
+    <Low>2</Low>
+    <High>2</High>
+    <Rule>@A_Price</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Description>Generated</Description>
+    <Info>false</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>4</BusinessRule_Id>
+    <BusNameA>SourceA.Volume</BusNameA>
+    <BusAliasA>A_Volume</BusAliasA>
+    <BusNameB>SourceB.Volume</BusNameB>
+    <BusAliasB>B_Volume</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_Volume</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Description>Generated</Description>
+    <Info>false</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>5</BusinessRule_Id>
+    <BusNameA>SourceA.Comment</BusNameA>
+    <BusAliasA>A_Comment</BusAliasA>
+    <BusNameB>SourceB.Comment</BusNameB>
+    <BusAliasB>B_Comment</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_Comment</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Description>Generated</Description>
+    <Info>false</Info>
+  </BusinessMapping>
+  <TabAliasA>
+    <AliasA_Id>0</AliasA_Id>
+    <NameA>SourceA.Environment</NameA>
+    <AliasA>A_Environment</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>1</AliasA_Id>
+    <NameA>SourceA.Id</NameA>
+    <AliasA>A_Id</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>2</AliasA_Id>
+    <NameA>SourceA.Name</NameA>
+    <AliasA>A_Name</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>3</AliasA_Id>
+    <NameA>SourceA.Price</NameA>
+    <AliasA>A_Price</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>4</AliasA_Id>
+    <NameA>SourceA.Volume</NameA>
+    <AliasA>A_Volume</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>5</AliasA_Id>
+    <NameA>SourceA.Comment</NameA>
+    <AliasA>A_Comment</AliasA>
+  </TabAliasA>
+  <TabAliasB>
+    <AliasB_Id>0</AliasB_Id>
+    <NameB>SourceB.Environment</NameB>
+    <AliasB>B_Environment</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>1</AliasB_Id>
+    <NameB>SourceB.Id</NameB>
+    <AliasB>B_Id</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>2</AliasB_Id>
+    <NameB>SourceB.Name</NameB>
+    <AliasB>B_Name</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>3</AliasB_Id>
+    <NameB>SourceB.Price</NameB>
+    <AliasB>B_Price</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>4</AliasB_Id>
+    <NameB>SourceB.Volume</NameB>
+    <AliasB>B_Volume</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>5</AliasB_Id>
+    <NameB>SourceB.Comment</NameB>
+    <AliasB>B_Comment</AliasB>
+  </TabAliasB>
+  <ConfigurationA>
+    <AliasDbA>@DB_Quote</AliasDbA>
+    <QueryA>SELECT
+  'Test1' AS Environment
+  ,Q.Id AS Id
+  ,Q.Share_Name AS Name
+  ,Q.Share_Price AS Price
+  ,Q.Share_Volume AS Volume
+  ,Q.Remark AS Comment
+FROM [T_Quote$]  Q
+WHERE Q.Id IN (@param1)</QueryA>
+  </ConfigurationA>
+  <ConfigurationB>
+    <AliasDbB>@DB_Quote1</AliasDbB>
+    <QueryB>SELECT 
+  '@ENV' AS Environment
+  ,Q.Id AS Id
+  ,Q.Share_Name AS Name
+  ,Q.Share_Price AS Price
+  ,Q.Share_Volume AS Volume
+  ,Q.Remark AS Comment
+FROM [T_Quote$]  Q
+WHERE Q.Id IN (@param2)</QueryB>
+    <Active>true</Active>
+  </ConfigurationB>
+  <Join>
+    <JoinType>0</JoinType>
+    <Unique>true</Unique>
+    <Sorted>true</Sorted>
+  </Join>
+</DataSetTestObject>

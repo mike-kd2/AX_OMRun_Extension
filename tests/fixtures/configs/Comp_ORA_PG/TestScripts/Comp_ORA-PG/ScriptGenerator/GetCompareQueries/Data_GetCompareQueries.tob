@@ -1,0 +1,323 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetTestObject xmlns="http://tempuri.org/DataSetTestObject.xsd">
+  <xs:schema id="DataSetTestObject" targetNamespace="http://tempuri.org/DataSetTestObject.xsd" xmlns:mstns="http://tempuri.org/DataSetTestObject.xsd" xmlns="http://tempuri.org/DataSetTestObject.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DataSetTestObject" msdata:IsDataSet="true" msdata:Locale="en-US" msdata:EnforceConstraints="False" msprop:Activated="True" msprop:OMrunVersion="5.5.0.10" msprop:MappingMethod="ByName">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="BusinessMapping">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BusinessRule_Id" msdata:Caption="BusinessRuleA_Id" type="xs:int" />
+                <xs:element name="BusNameA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusAliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusNameB" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusAliasB" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Function" type="xs:string" minOccurs="0" />
+                <xs:element name="Low" type="xs:string" minOccurs="0" />
+                <xs:element name="High" type="xs:string" minOccurs="0" />
+                <xs:element name="Rule" type="xs:string" minOccurs="0" />
+                <xs:element name="Rounding" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Key" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+                <xs:element name="Modified_On" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Modified_By" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Info" type="xs:boolean" default="false" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TabAliasA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasA_Id" type="xs:int" />
+                <xs:element name="NameA" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TabAliasB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasB_Id" msdata:Caption="AliasA_Id" type="xs:int" />
+                <xs:element name="NameB" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AliasB" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ConfigurationA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasDbA" type="xs:string" minOccurs="0" />
+                <xs:element name="QueryA" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ConfigurationB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasDbB" msdata:Caption="AliasDbA" type="xs:string" minOccurs="0" />
+                <xs:element name="QueryB" msdata:Caption="QueryA" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Join">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="JoinType" type="xs:string" default="0" minOccurs="0" />
+                <xs:element name="Unique" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Sorted" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:BusinessMapping" />
+        <xs:field xpath="mstns:BusinessRule_Id" />
+      </xs:unique>
+      <xs:unique name="AliasAKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TabAliasA" />
+        <xs:field xpath="mstns:AliasA_Id" />
+      </xs:unique>
+      <xs:unique name="TabAliasB_AliasAKey1" msdata:ConstraintName="AliasAKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TabAliasB" />
+        <xs:field xpath="mstns:AliasB_Id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <BusinessMapping>
+    <BusinessRule_Id>0</BusinessRule_Id>
+    <BusNameA>SourceA.table_name</BusNameA>
+    <BusAliasA>A_table_name</BusAliasA>
+    <BusNameB>SourceB.table_name</BusNameB>
+    <BusAliasB>B_table_name</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_table_name</Rule>
+    <Rounding />
+    <Key>true</Key>
+    <Active>true</Active>
+    <Modified_On>2024-08-06T11:22:37.4164485+02:00</Modified_On>
+    <Modified_By>OMrun</Modified_By>
+    <Info>false</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>1</BusinessRule_Id>
+    <BusNameA>SourceA.pk_attribute</BusNameA>
+    <BusAliasA>A_pk_attribute</BusAliasA>
+    <BusNameB>SourceB.pk_attribute</BusNameB>
+    <BusAliasB>B_pk_attribute</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_pk_attribute</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Modified_On>2024-08-06T11:22:37.4165453+02:00</Modified_On>
+    <Modified_By>OMrun</Modified_By>
+    <Info>false</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>2</BusinessRule_Id>
+    <BusNameA>SourceA.table_catalog</BusNameA>
+    <BusAliasA>A_table_catalog</BusAliasA>
+    <BusNameB>SourceB.table_catalog</BusNameB>
+    <BusAliasB>B_table_catalog</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_table_catalog</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Modified_On>2024-08-06T11:22:37.4166377+02:00</Modified_On>
+    <Modified_By>OMrun</Modified_By>
+    <Info>true</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>3</BusinessRule_Id>
+    <BusNameA>SourceA.infrastructur_info</BusNameA>
+    <BusAliasA>A_infrastructur_info</BusAliasA>
+    <BusNameB>SourceB.infrastructur_info</BusNameB>
+    <BusAliasB>B_infrastructur_info</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_infrastructur_info</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Modified_On>2024-08-06T11:22:37.416724+02:00</Modified_On>
+    <Modified_By>OMrun</Modified_By>
+    <Info>false</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>4</BusinessRule_Id>
+    <BusNameA>SourceA.select_statement</BusNameA>
+    <BusAliasA>A_select_statement</BusAliasA>
+    <BusNameB>SourceB.select_statement</BusNameB>
+    <BusAliasB>B_select_statement</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_select_statement</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Modified_On>2024-08-06T11:22:37.4168127+02:00</Modified_On>
+    <Modified_By>OMrun</Modified_By>
+    <Info>true</Info>
+  </BusinessMapping>
+  <TabAliasA>
+    <AliasA_Id>0</AliasA_Id>
+    <NameA>SourceA.table_name</NameA>
+    <AliasA>A_table_name</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>1</AliasA_Id>
+    <NameA>SourceA.pk_attribute</NameA>
+    <AliasA>A_pk_attribute</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>2</AliasA_Id>
+    <NameA>SourceA.table_catalog</NameA>
+    <AliasA>A_table_catalog</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>3</AliasA_Id>
+    <NameA>SourceA.infrastructur_info</NameA>
+    <AliasA>A_infrastructur_info</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>4</AliasA_Id>
+    <NameA>SourceA.select_statement</NameA>
+    <AliasA>A_select_statement</AliasA>
+  </TabAliasA>
+  <TabAliasB>
+    <AliasB_Id>0</AliasB_Id>
+    <NameB>SourceB.table_name</NameB>
+    <AliasB>B_table_name</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>1</AliasB_Id>
+    <NameB>SourceB.pk_attribute</NameB>
+    <AliasB>B_pk_attribute</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>2</AliasB_Id>
+    <NameB>SourceB.table_catalog</NameB>
+    <AliasB>B_table_catalog</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>3</AliasB_Id>
+    <NameB>SourceB.infrastructur_info</NameB>
+    <AliasB>B_infrastructur_info</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>4</AliasB_Id>
+    <NameB>SourceB.select_statement</NameB>
+    <AliasB>B_select_statement</AliasB>
+  </TabAliasB>
+  <ConfigurationA>
+    <AliasDbA>@DB_Source</AliasDbA>
+    <QueryA>/* Original Oracle script for OMrun */
+SELECT
+x.table_name AS table_name
+,x.pk_attribute AS pk_attribute
+,x.table_catalog AS table_catalog
+,x.infrastructur_info AS infrastructur_info
+,x.select_statement AS select_statement
+FROM @SCHEMA_Source.@param1 x
+WHERE 
+    x.table_name NOT IN ('enumset','pls_unittag') -- excluding materialized views
+    AND x.table_name NOT IN ('wei_erpinboundmessage','wei_erpoutboundmessage','ebroperationaltimespecprop') -- temporary excluding, under investigation
+ORDER BY x.table_name</QueryA>
+    <Active>true</Active>
+  </ConfigurationA>
+  <ConfigurationB>
+    <AliasDbB>@DB_Target</AliasDbB>
+    <QueryB>/* Original PostgreSQL script for OMrun */
+SELECT
+x.table_name AS table_name
+,x.pk_attribute AS pk_attribute
+,x.table_catalog AS table_catalog
+,x.infrastructur_info AS infrastructur_info
+,x.select_statement AS select_statement
+FROM @SCHEMA_Target.@param2 x
+WHERE 
+    x.table_name NOT IN ('wei_erpinboundmessage','wei_erpoutboundmessage','ebroperationaltimespecprop') -- temporary excluding, under investigation
+ORDER BY x.table_name
+
+</QueryB>
+    <Active>true</Active>
+  </ConfigurationB>
+  <Join>
+    <JoinType>0</JoinType>
+    <Unique>true</Unique>
+    <Sorted>true</Sorted>
+  </Join>
+</DataSetTestObject>

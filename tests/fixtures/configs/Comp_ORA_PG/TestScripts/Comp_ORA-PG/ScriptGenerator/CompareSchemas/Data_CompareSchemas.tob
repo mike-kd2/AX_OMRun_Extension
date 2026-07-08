@@ -1,0 +1,335 @@
+<?xml version="1.0" standalone="yes"?>
+<DataSetTestObject xmlns="http://tempuri.org/DataSetTestObject.xsd">
+  <xs:schema id="DataSetTestObject" targetNamespace="http://tempuri.org/DataSetTestObject.xsd" xmlns:mstns="http://tempuri.org/DataSetTestObject.xsd" xmlns="http://tempuri.org/DataSetTestObject.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="DataSetTestObject" msdata:IsDataSet="true" msdata:Locale="en-US" msdata:EnforceConstraints="False" msprop:Activated="True" msprop:MappingMethod="BySequence" msprop:OMrunVersion="5.5.0.10">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="BusinessMapping">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="BusinessRule_Id" msdata:Caption="BusinessRuleA_Id" type="xs:int" />
+                <xs:element name="BusNameA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusAliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusNameB" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BusAliasB" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Function" type="xs:string" minOccurs="0" />
+                <xs:element name="Low" type="xs:string" minOccurs="0" />
+                <xs:element name="High" type="xs:string" minOccurs="0" />
+                <xs:element name="Rule" type="xs:string" minOccurs="0" />
+                <xs:element name="Rounding" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="2" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Key" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+                <xs:element name="Modified_On" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Modified_By" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Info" type="xs:boolean" default="false" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TabAliasA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasA_Id" type="xs:int" />
+                <xs:element name="NameA" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="TabAliasB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasB_Id" msdata:Caption="AliasA_Id" type="xs:int" />
+                <xs:element name="NameB" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="AliasB" msdata:Caption="AliasA" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ConfigurationA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasDbA" type="xs:string" minOccurs="0" />
+                <xs:element name="QueryA" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ConfigurationB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="AliasDbB" msdata:Caption="AliasDbA" type="xs:string" minOccurs="0" />
+                <xs:element name="QueryB" msdata:Caption="QueryA" type="xs:string" minOccurs="0" />
+                <xs:element name="Active" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Join">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="JoinType" type="xs:string" default="0" minOccurs="0" />
+                <xs:element name="Unique" type="xs:boolean" default="true" minOccurs="0" />
+                <xs:element name="Sorted" type="xs:boolean" default="true" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:BusinessMapping" />
+        <xs:field xpath="mstns:BusinessRule_Id" />
+      </xs:unique>
+      <xs:unique name="AliasAKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TabAliasA" />
+        <xs:field xpath="mstns:AliasA_Id" />
+      </xs:unique>
+      <xs:unique name="TabAliasB_AliasAKey1" msdata:ConstraintName="AliasAKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:TabAliasB" />
+        <xs:field xpath="mstns:AliasB_Id" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <BusinessMapping>
+    <BusinessRule_Id>0</BusinessRule_Id>
+    <BusNameA>SourceA.TABLE_NAME</BusNameA>
+    <BusAliasA>A_TABLE_NAME</BusAliasA>
+    <BusNameB>SourceB.table_name</BusNameB>
+    <BusAliasB>B_table_name</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_TABLE_NAME</Rule>
+    <Rounding />
+    <Key>true</Key>
+    <Active>true</Active>
+    <Modified_On>2025-10-23T11:53:23.0339678+02:00</Modified_On>
+    <Modified_By>frz</Modified_By>
+    <Info>false</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>1</BusinessRule_Id>
+    <BusNameA>SourceA.COLUMN_NAME</BusNameA>
+    <BusAliasA>A_COLUMN_NAME</BusAliasA>
+    <BusNameB>SourceB.column_name</BusNameB>
+    <BusAliasB>B_column_name</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_COLUMN_NAME</Rule>
+    <Rounding />
+    <Key>true</Key>
+    <Active>true</Active>
+    <Modified_On>2025-10-23T11:53:23.034015+02:00</Modified_On>
+    <Modified_By>frz</Modified_By>
+    <Info>false</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>2</BusinessRule_Id>
+    <BusNameA>SourceA.DATA_TYPE</BusNameA>
+    <BusAliasA>A_DATA_TYPE</BusAliasA>
+    <BusNameB>SourceB.data_type</BusNameB>
+    <BusAliasB>B_data_type</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_DATA_TYPE</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Modified_On>2025-10-23T11:53:23.0340588+02:00</Modified_On>
+    <Modified_By>frz</Modified_By>
+    <Info>true</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>3</BusinessRule_Id>
+    <BusNameA>SourceA.DATA_LENGTH</BusNameA>
+    <BusAliasA>A_DATA_LENGTH</BusAliasA>
+    <BusNameB>SourceB.data_length</BusNameB>
+    <BusAliasB>B_data_length</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_DATA_LENGTH</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Modified_On>2025-10-23T11:53:23.0341169+02:00</Modified_On>
+    <Modified_By>frz</Modified_By>
+    <Info>true</Info>
+  </BusinessMapping>
+  <BusinessMapping>
+    <BusinessRule_Id>4</BusinessRule_Id>
+    <BusNameA>SourceA.NULLABLE</BusNameA>
+    <BusAliasA>A_NULLABLE</BusAliasA>
+    <BusNameB>SourceB.nullable</BusNameB>
+    <BusAliasB>B_nullable</BusAliasB>
+    <Function>=</Function>
+    <Low />
+    <High />
+    <Rule>@A_NULLABLE</Rule>
+    <Rounding />
+    <Key>false</Key>
+    <Active>true</Active>
+    <Modified_On>2025-10-23T11:53:23.034162+02:00</Modified_On>
+    <Modified_By>frz</Modified_By>
+    <Info>false</Info>
+  </BusinessMapping>
+  <TabAliasA>
+    <AliasA_Id>0</AliasA_Id>
+    <NameA>SourceA.TABLE_NAME</NameA>
+    <AliasA>A_TABLE_NAME</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>1</AliasA_Id>
+    <NameA>SourceA.COLUMN_NAME</NameA>
+    <AliasA>A_COLUMN_NAME</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>2</AliasA_Id>
+    <NameA>SourceA.DATA_TYPE</NameA>
+    <AliasA>A_DATA_TYPE</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>3</AliasA_Id>
+    <NameA>SourceA.DATA_LENGTH</NameA>
+    <AliasA>A_DATA_LENGTH</AliasA>
+  </TabAliasA>
+  <TabAliasA>
+    <AliasA_Id>4</AliasA_Id>
+    <NameA>SourceA.NULLABLE</NameA>
+    <AliasA>A_NULLABLE</AliasA>
+  </TabAliasA>
+  <TabAliasB>
+    <AliasB_Id>0</AliasB_Id>
+    <NameB>SourceB.table_name</NameB>
+    <AliasB>B_table_name</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>1</AliasB_Id>
+    <NameB>SourceB.column_name</NameB>
+    <AliasB>B_column_name</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>2</AliasB_Id>
+    <NameB>SourceB.data_type</NameB>
+    <AliasB>B_data_type</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>3</AliasB_Id>
+    <NameB>SourceB.data_length</NameB>
+    <AliasB>B_data_length</AliasB>
+  </TabAliasB>
+  <TabAliasB>
+    <AliasB_Id>4</AliasB_Id>
+    <NameB>SourceB.nullable</NameB>
+    <AliasB>B_nullable</AliasB>
+  </TabAliasB>
+  <ConfigurationA>
+    <AliasDbA>@DB_Source</AliasDbA>
+    <QueryA>SELECT 
+    c.TABLE_NAME,
+    c.COLUMN_NAME,
+    c.DATA_TYPE,
+    c.DATA_LENGTH,
+    c.NULLABLE
+FROM 
+    ALL_TABLES t
+JOIN 
+    ALL_TAB_COLUMNS c
+    ON t.OWNER = c.OWNER AND t.TABLE_NAME = c.TABLE_NAME
+WHERE 
+    t.OWNER = UPPER('@param1')   -- Replace with your schema
+    AND t.TEMPORARY = 'N'           -- exclude temporary tables
+    AND t.NESTED = 'NO'             -- exclude nested tables
+    AND t.IOT_TYPE IS NULL          -- keine Index-Organized Tables
+    AND c.TABLE_NAME != 'EBROPERATIONALTIMESPECPROP'
+ORDER BY 
+    c.TABLE_NAME,
+    c.COLUMN_ID</QueryA>
+    <Active>true</Active>
+  </ConfigurationA>
+  <ConfigurationB>
+    <AliasDbB>@DB_Target</AliasDbB>
+    <QueryB>SELECT 
+    UPPER(c.table_name) as table_name,
+    UPPER(c.column_name) as column_name,
+    UPPER(c.data_type) as data_type ,
+    c.character_maximum_length as data_length,
+    LEFT(UPPER(c.is_nullable),1) as nullable
+FROM 
+    information_schema.columns c
+JOIN
+    pg_tables t
+    ON c.table_schema = t.schemaname
+    AND c.table_name = t.tablename
+WHERE 
+    c.table_schema = '@param2'  -- replace with your schema
+ORDER BY 
+    c.table_name,
+    c.ordinal_position</QueryB>
+    <Active>true</Active>
+  </ConfigurationB>
+  <Join>
+    <JoinType>0</JoinType>
+    <Unique>true</Unique>
+    <Sorted>true</Sorted>
+  </Join>
+</DataSetTestObject>
